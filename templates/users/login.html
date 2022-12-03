@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title> Login </title>
+{% endblock title %}
+
+{% block content %}
+    <br>
+    {% include 'includes/alerts.html' %}
+    <div class="card-body">
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <div class="d-flex justify-content-center">
+                <div class="col-lg-6">
+                    <div class="sn-field">
+                        <input class="form-control" type="text" name="email" placeholder="Email" required>
+                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                        <input class="form-control" type="submit" value="Login">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

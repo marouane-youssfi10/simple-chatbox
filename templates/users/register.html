@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	<title> Register </title>
+{% endblock title %}
+
+{% block content %}
+    {% include 'includes/alerts.html' %}
+    <br>
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-6">
+                <div class="sn-field">
+                    <p>first name {{ form.first_name }}</p>
+                    <p>last name {{ form.last_name }}</p>
+                    <p>username {{ form.username }}</p>
+                    <p>email     {{ form.email }}</p>
+                    <p>password {{ form.password }}</p>
+                    <p>confirm password {{ form.confirm_password }}</p>
+                    <button type="submit" value="submit" class="form-control btn btn-danger">submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock content %}
