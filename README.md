@@ -15,5 +15,9 @@
 ### install libraries
 - pip install -r requirements.txt
 
+### makemigrations and migrate
+- python manage.py makemigrations
+- python manage.py migrate
+
 ### run the project
 - python manage.py runserver
