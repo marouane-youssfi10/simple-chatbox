@@ -21,3 +21,5 @@
 
 ### run the project
 - python manage.py runserver
+
+![Screenshot from 2022-12-07 12-22-55](https://user-images.githubusercontent.com/74411397/206166871-6fa3cc8b-7855-4bd2-bb86-b62b862fc25c.png)
